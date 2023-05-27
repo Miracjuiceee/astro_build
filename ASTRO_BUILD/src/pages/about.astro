@@ -1,4 +1,23 @@
 ---
+		const pageTitle = "About EarlyFinder - Web3 Project Validator";
+
+		const identity = {
+  			firstName: "Mirac",
+  			country: "France",
+  			occupation: "Front-End Dev / Graphic Designer",
+  			hobbies: ["Web Devellopement", "Web3"],
+};
+
+		const skills = ["HTML", "CSS", "JavaScript", "Astro", "Writing Docs", "WebDesign"];
+		
+		const happy = true;
+		const finished = false;
+		const goal = 3;
+
+		const operatingSystem = "windows";
+		const quantity = 3;
+		const footwear = "boots";
+		const student = false;
 ---
 
 <html lang="en">
@@ -7,7 +26,7 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>About EarlyFinder - Web3 Project Validator</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<a href="/">Home</a>
@@ -21,5 +40,31 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel tristique dui. Etiam congue aliquet sollicitudin. Morbi eget consequat libero. Curabitur faucibus dolor vel nibh ultrices</p>
 
 		<p>In aliquet at erat ut ullamcorper. Ut dolor urna, pellentesque eu posuere vel, hendrerit sed ipsum. Quisque sed commodo eros. Nam urna erat, pretium id rutrum efficitur, volutpat sed erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+		<p>Here are a few facts about me:</p>
+		<ul>
+ 			<li>My name is {identity.firstName}.</li>
+  			<li>I live in {identity.country} and I'm studying {identity.occupation}.</li>
+  				{identity.hobbies.length >= 2 && 
+    		<li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+ 			} 
+		</ul>
+		<p>My skills are:</p>
+		<ul>
+		{skills.map((skill) => <li>{skill}</li>)}
+		</ul>
+
+		<p>Hello I try JavaScript implementation , I'm {identity.firstName}</p>
+
+		{happy && <p>I am happy to be learning Astro!</p>}
+
+		{finished && <p>I finished this tutorial!</p>}
+
+		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+
+		<p>{operatingSystem}</p>
+		{student && <p>I am still in school.</p>}
+		<p>I have {quantity + 8} pairs of {footwear}</p>
+		{operatingSystem === "windows" ? <p>I am using a Mac.</p> : <p>I am not using a Mac.</p>}
 	</body>
 </html>
