@@ -1,5 +1,14 @@
 ---
-const pageTitle = "EarlyFinder - Web3 Project Validator"
+	import '../styles/global.css';
+	import Footer from '../components/Footer.astro';
+	import Navigation from '../components/Navigation.astro';
+
+	const pageTitle = "EarlyFinder - Web3 Project Validator"
+	
+
+	/// Color variable /// 
+	const titleColor = "#8ed816"
+	const fontTitle = "Helvetica"
 ---
 
 <html lang="en">
@@ -9,13 +18,16 @@ const pageTitle = "EarlyFinder - Web3 Project Validator"
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+
+
+
 	</head>
 	<body>
-		<a href="/">Home</a>
-		<a href="/about">About</a>
-		<a href="/blog">Blog</a>
-
+		<Navigation/>
 
 		<h1>EarlyFinder - Home</h1>
+		
+		<Footer />
 	</body>
+
 </html>
