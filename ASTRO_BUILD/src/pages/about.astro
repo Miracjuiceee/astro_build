@@ -1,4 +1,5 @@
 ---
+		import Footer from '../components/Footer.astro';
 		const pageTitle = "About EarlyFinder - Web3 Project Validator";
 
 		const identity = {
@@ -66,5 +67,7 @@
 		{student && <p>I am still in school.</p>}
 		<p>I have {quantity + 8} pairs of {footwear}</p>
 		{operatingSystem === "windows" ? <p>I am using a Mac.</p> : <p>I am not using a Mac.</p>}
+
+		<Footer />
 	</body>
 </html>
